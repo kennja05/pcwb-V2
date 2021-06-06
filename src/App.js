@@ -7,8 +7,7 @@ import Homepage from './pages/homepage.js';
 import {
   BrowserRouter as Router, 
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -16,19 +15,19 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path='/director'>
+          <Route exact path='/director'>
             <Director />
           </Route>
-          <Route path='/events'>
+          <Route exact path='/events'>
             <Events />
           </Route>
-          <Route path='/media'>
+          <Route exact path='/media'>
             <Media />
           </Route>
-          <Route path='/members'>
+          <Route exact path='/members'>
             <Members />
           </Route>
-          <Route path='/'>
+          <Route exact path='/'>
             <Homepage />
           </Route>
         </Switch>
