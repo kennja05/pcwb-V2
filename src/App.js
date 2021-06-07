@@ -11,6 +11,17 @@ import {
 } from "react-router-dom";
 
 function App() {
+
+  const colors = {
+    darkBlue: '#262c40',
+    darkBlue2: '#192333',
+    white: '#fbfbfb',
+    offWhite: '#fbedda',
+    orange: '#f37955',
+    black: '#040404',
+    gray: '#777'
+  }
+
   return (
     <Router>
       <div className="App">
@@ -28,7 +39,7 @@ function App() {
             <Members />
           </Route>
           <Route exact path='/'>
-            <Homepage />
+            <Homepage {...colors}/>
           </Route>
         </Switch>
       </div>
