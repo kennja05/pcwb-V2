@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 const IntroHeader = styled.header`
     height: 100vh;
@@ -9,6 +9,25 @@ const IntroHeader = styled.header`
 
 const IntroTitleBox = styled.div`
     color: ${props => props.white};
+    animation: ${fadeIn} 1s 2s;
+`
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0 ;
+  }
+`
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `
 
 const MainHeader = styled.header`
