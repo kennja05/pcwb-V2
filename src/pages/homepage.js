@@ -19,11 +19,31 @@ const fadeIn = keyframes`
   }
 `
 
+const lineDrawToRight = keyframes`
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+`
+
+const lineDrawToLeft = keyframes`
+    0% {
+      left: 100%;
+      width:0;
+    }
+    100% {
+      left: 0;
+      width:100%;
+    }
+`
+
 const IntroHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
-    animation: ${fadeOut} 1s 5s forwards;
+    animation: ${fadeOut} 3s 8s forwards;
 `
 
 const IntroTitleBox = styled.div`
@@ -33,6 +53,23 @@ const IntroTitleBox = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    &:before, &:after {
+        content: '';
+        width: 100%;
+        border-bottom: solid .5rem ${props => props.white};
+        position: absolute;
+    };
+    &:before {
+        left: 0;
+        top: 0%;
+        animation: ${lineDrawToRight} .8s ease-in 2s backwards;
+    }
+
+    &:after {
+        left: 0;
+        top: 55%;
+        animation: ${lineDrawToLeft} .8s ease-in 2s backwards;
+    }
 `
 
 const MainHeader = styled.header`
