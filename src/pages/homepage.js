@@ -43,16 +43,21 @@ const IntroHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
-    animation: ${fadeOut} 3s 8s forwards;
+    padding: 1rem;
 `
+//    animation: ${fadeOut} 3s 8s forwards;
+
 
 const IntroTitleBox = styled.div`
     color: ${props => props.white};
-    animation: ${fadeIn} 1s 2s backwards;
+    animation: ${fadeIn} 2s 1s backwards;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
+    border: solid 1px black;
     transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    line-height: 2;
     &:before, &:after {
         content: '';
         width: 100%;
@@ -62,13 +67,13 @@ const IntroTitleBox = styled.div`
     &:before {
         left: 0;
         top: 0%;
-        animation: ${lineDrawToRight} .8s ease-in 2s backwards;
+        animation: ${lineDrawToRight} .8s ease-in 3s backwards;
     }
 
     &:after {
         left: 0;
-        top: 55%;
-        animation: ${lineDrawToLeft} .8s ease-in 2s backwards;
+        bottom: 0%;
+        animation: ${lineDrawToLeft} .8s ease-in 3.8s backwards;
     }
 `
 
@@ -100,7 +105,8 @@ export default class Homepage extends React.Component{
             <div style={{position: 'relative'}}>
                 <IntroHeader {...this.props}>
                     <IntroTitleBox {...this.props}>
-                        PCWB Homepage
+                        <h1>Penn Central Wind Band</h1>
+                        <h2>William Kenny, Conductor</h2>
                     </IntroTitleBox>
                 </IntroHeader> 
                 <MainHeader {...this.props}>
