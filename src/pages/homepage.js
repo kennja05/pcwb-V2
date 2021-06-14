@@ -1,42 +1,14 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
-const fadeOut = keyframes`
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0 ;
-  }
-`
-
 const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`
+  0% {opacity: 0;}100% {opacity: 1;}`
 
 const lineDrawToRight = keyframes`
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-`
+    0% {width: 0;}100% {width: 100%;}`
 
 const lineDrawToLeft = keyframes`
-    0% {
-      left: 100%;
-      width:0;
-    }
-    100% {
-      left: 0;
-      width:100%;
-    }
+    0% {left: 100%;width:0;}100% {left: 0;width:100%;}
 `
 
 const IntroHeader = styled.header`
@@ -45,19 +17,17 @@ const IntroHeader = styled.header`
     background-color: ${props => props.darkBlue};
     padding: 1rem;
 `
-//    animation: ${fadeOut} 3s 8s forwards;
-
 
 const IntroTitleBox = styled.div`
     color: ${props => props.white};
-    animation: ${fadeIn} 2s 1s backwards;
     position: absolute;
     top: 53%;
     left: 50%;
-    border: solid 1px black;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    line-height: 2;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
@@ -67,14 +37,22 @@ const IntroTitleBox = styled.div`
     &:before {
         left: 0;
         top: 0%;
-        animation: ${lineDrawToRight} .8s ease-in 3s backwards;
+        animation: ${lineDrawToRight} .8s ease-in 4s backwards;
     }
 
     &:after {
         left: 0;
         bottom: 0%;
-        animation: ${lineDrawToLeft} .8s ease-in 3.8s backwards;
+        animation: ${lineDrawToLeft} .8s ease-in 4.8s backwards;
     }
+`
+
+const IntroH1 = styled.h1`
+    animation: ${fadeIn} 1.5s;
+    
+`
+const IntroH2 = styled.h2`
+    animation: ${fadeIn} 1.5s 2s backwards;
 `
 
 const MainHeader = styled.header`
@@ -105,8 +83,8 @@ export default class Homepage extends React.Component{
             <div style={{position: 'relative'}}>
                 <IntroHeader {...this.props}>
                     <IntroTitleBox {...this.props}>
-                        <h1>Penn Central Wind Band</h1>
-                        <h2>William Kenny, Conductor</h2>
+                        <IntroH1>Penn Central Wind Band</IntroH1>
+                        <IntroH2>William Kenny, Conductor</IntroH2>
                     </IntroTitleBox>
                 </IntroHeader> 
                 <MainHeader {...this.props}>
