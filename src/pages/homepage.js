@@ -1,6 +1,11 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
+const HomepageWrapper = styled.div`
+    position: relative;
+    text-align: center;
+`
+
 const fadeIn = keyframes`
   0% {opacity: 0;}100% {opacity: 1;}`
 
@@ -15,7 +20,6 @@ const IntroHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
-    padding: 1rem;
 `
 
 const IntroTitleBox = styled.div`
@@ -25,7 +29,6 @@ const IntroTitleBox = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: uppercase;
-    text-align: center;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
@@ -72,27 +75,22 @@ const MainHeaderTitleBox = styled.div`
     color: ${props => props.darkBlue};
 `
 
-export default class Homepage extends React.Component{
+export default function Homepage(props) {
     
-    state = {
-        intro: true
-    }
-    
-    render(){
-        return(
-            <div style={{position: 'relative'}}>
-                <IntroHeader {...this.props}>
-                    <IntroTitleBox {...this.props}>
-                        <IntroH1>Penn Central Wind Band</IntroH1>
-                        <IntroH2>William Kenny, Conductor</IntroH2>
-                    </IntroTitleBox>
-                </IntroHeader> 
-                <MainHeader {...this.props}>
-                    <MainHeaderTitleBox {...this.props}>
-                        PCWB Homepage
-                    </MainHeaderTitleBox>
-                </MainHeader> 
-            </div>
-        )
-    }
+    return(
+        <HomepageWrapper>
+            <IntroHeader {...props}>
+                <IntroTitleBox {...props}>
+                    <IntroH1>Penn Central Wind Band</IntroH1>
+                    <IntroH2>William Kenny, Conductor</IntroH2>
+                </IntroTitleBox>
+            </IntroHeader> 
+            <MainHeader {...props}>
+                <MainHeaderTitleBox {...props}>
+                    <h1>Penn Central Wind Band</h1>
+                    <h1>William Kenny, Conductor</h1>
+                </MainHeaderTitleBox>
+            </MainHeader> 
+        </HomepageWrapper>
+    )
 }
