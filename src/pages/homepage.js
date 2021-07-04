@@ -9,17 +9,21 @@ const HomepageWrapper = styled.div`
 const fadeIn = keyframes`
   0% {opacity: 0;}100% {opacity: 1;}`
 
+const fadeOut = keyframes`
+ 0% {opacity: 1;}100% {opacity: 0;}`
+
 const lineDrawToRight = keyframes`
     0% {width: 0;}100% {width: 100%;}`
 
 const lineDrawToLeft = keyframes`
     0% {left: 100%;width:0;}100% {left: 0;width:100%;}
 `
-
+//todo - take a look at timing of fadeOut animation
 const IntroHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
+    animation: ${fadeOut} 1s 1s forwards;
 `
 
 const IntroTitleBox = styled.div`
