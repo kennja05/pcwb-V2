@@ -2,8 +2,10 @@ import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
 const HomepageWrapper = styled.div`
-    position: relative;
     text-align: center;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh;
 `
 
 const fadeIn = keyframes`
@@ -20,7 +22,7 @@ const lineDrawToLeft = keyframes`
 `
 //todo - take a look at timing of fadeOut animation
 const IntroHeader = styled.header`
-    height: 100vh;
+    grid-area: auto;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
     animation: ${fadeOut} 1s 3s forwards;
@@ -32,7 +34,6 @@ const IntroHeader = styled.header`
 
 const IntroTitleBox = styled.div`
     color: ${props => props.white};
-    
     text-transform: uppercase;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
@@ -65,6 +66,7 @@ const IntroH2 = styled.h2`
 const MainHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
+    grid-area: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,7 +85,6 @@ const MainHeader = styled.header`
 
 const MainHeaderTitleBox = styled.div`
     color: ${props => props.darkBlue};
-    
     text-transform: uppercase;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
