@@ -23,15 +23,16 @@ const IntroHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
-    animation: ${fadeOut} 1s 1s forwards;
+    animation: ${fadeOut} 1s 3s forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const IntroTitleBox = styled.div`
     color: ${props => props.white};
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
     text-transform: uppercase;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
@@ -56,7 +57,6 @@ const IntroTitleBox = styled.div`
 
 const IntroH1 = styled.h1`
     animation: ${fadeIn} 1.5s;
-    
 `
 const IntroH2 = styled.h2`
     animation: ${fadeIn} 1.5s 2s backwards;
@@ -73,10 +73,35 @@ const MainHeader = styled.header`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
     `
 
 const MainHeaderTitleBox = styled.div`
     color: ${props => props.darkBlue};
+    
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding: 0 1.5rem 0 1.5rem;
+    &:before, &:after {
+        content: '';
+        width: 100%;
+        border-bottom: solid .5rem ${props => props.white};
+        position: absolute;
+    };
+    &:before {
+        left: 0;
+        top: 0%;
+    }
+
+    &:after {
+        left: 0;
+        bottom: 0%;
+    }
 `
 
 export default function Homepage(props) {
