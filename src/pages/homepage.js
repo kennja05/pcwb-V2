@@ -1,4 +1,5 @@
 import React from 'react'
+import TrumpetBackground from '../assets/images/trumpet.jpg'
 import styled, {keyframes} from 'styled-components'
 
 const HomepageWrapper = styled.div`
@@ -7,6 +8,8 @@ const HomepageWrapper = styled.div`
     grid-template-columns: 100vw;
     grid-template-rows: 100vh;
     grid-template-areas: "header";
+    font-size: 2.1rem;
+    text-transform: uppercase;
 `
 
 const fadeIn = keyframes`
@@ -25,9 +28,8 @@ const lineDrawToLeft = keyframes`
 const IntroHeader = styled.header`
     grid-area: header;
     z-index: 1;
-    font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
-    animation: ${fadeOut} 1s 3s forwards;
+    animation: ${fadeOut} 1s 6s forwards;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,8 +37,8 @@ const IntroHeader = styled.header`
 `
 
 const IntroTitleBox = styled.div`
+    position: relative;
     color: ${props => props.white};
-    text-transform: uppercase;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
@@ -50,7 +52,6 @@ const IntroTitleBox = styled.div`
         top: 0%;
         animation: ${lineDrawToRight} .8s ease-in 4s backwards;
     }
-
     &:after {
         left: 0;
         bottom: 0%;
@@ -66,41 +67,34 @@ const IntroH2 = styled.h2`
 `
 
 const MainHeader = styled.header`
-    height: 100vh;
-    font-size: 2.1rem;
     grid-area: header;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(https://images-na.ssl-images-amazon.com/images/I/71l6xKqHLCL._AC_SL1500_.jpg)
+    background-image: url(${TrumpetBackground});
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
     width: 100vw;
     justify-content: center;
     align-items: center;
     `
 
 const MainHeaderTitleBox = styled.div`
+    position: relative;
     color: ${props => props.darkBlue};
-    text-transform: uppercase;
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
-        border-bottom: solid .5rem ${props => props.white};
+        border-bottom: solid .5rem ${props => props.darkBlue};
         position: absolute;
     };
     &:before {
         left: 0;
         top: 0%;
     }
-
     &:after {
         left: 0;
         bottom: 0%;
@@ -120,7 +114,7 @@ export default function Homepage(props) {
             <MainHeader {...props}>
                 <MainHeaderTitleBox {...props}>
                     <h1>Penn Central Wind Band</h1>
-                    <h1>William Kenny, Conductor</h1>
+                    <h2>William Kenny, Conductor</h2>
                 </MainHeaderTitleBox>
             </MainHeader> 
         </HomepageWrapper>
