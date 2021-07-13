@@ -6,6 +6,7 @@ const HomepageWrapper = styled.div`
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 100vh;
+    grid-template-areas: "header";
 `
 
 const fadeIn = keyframes`
@@ -22,7 +23,8 @@ const lineDrawToLeft = keyframes`
 `
 //todo - take a look at timing of fadeOut animation
 const IntroHeader = styled.header`
-    grid-area: auto;
+    grid-area: header;
+    z-index: 1;
     font-size: 2.1rem;
     background-color: ${props => props.darkBlue};
     animation: ${fadeOut} 1s 3s forwards;
@@ -66,7 +68,7 @@ const IntroH2 = styled.h2`
 const MainHeader = styled.header`
     height: 100vh;
     font-size: 2.1rem;
-    grid-area: auto;
+    grid-area: header;
     position: absolute;
     top: 0;
     left: 0;
