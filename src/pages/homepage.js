@@ -5,7 +5,17 @@ import TrumpetBackground from '../assets/images/trumpet.jpg';
 import Seal from '../assets/images/seal.png';
 
 const HomepageWrapper = styled.div`
-    background-color: ${props => props.darkBlue};
+    font-size: 2.5rem;
+    background: linear-gradient(to top, ${props => props.darkBlue2}, ${props => props.darkBlue});
+`
+
+const AboutSection = styled.section`
+    color: ${props => props.offWhite};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-indent: 4rem;
+    padding: 5% 20% 0 20%;    
 `
 
 const HomepageHeader = styled.header`
@@ -14,7 +24,6 @@ const HomepageHeader = styled.header`
     grid-template-columns: 100vw;
     grid-template-rows: 100vh;
     grid-template-areas: "header";
-    font-size: 2.1rem;
     text-transform: uppercase;
 `
 
@@ -125,7 +134,7 @@ export default function Homepage(props) {
                     </MainHeaderTitleBox>
                 </MainHeader> 
             </HomepageHeader>
-            <section>
+            <AboutSection {...props}>
                 <h2>About Us</h2>
                 <p>
                     The Penn Central Wind Band is an all-volunteer organization sponsored by Bucknell University as a service to the region. Many members of the band live in central Pennsylvania, but some travel from far afield to rehearse and perform with the ensemble. Many of the band's members hold music degrees, and are music teachers and professional performers, athough all are great players!
@@ -133,8 +142,8 @@ export default function Homepage(props) {
                 <p>
                     The PCWB, founded in 1994, is one of the few select ensembles to have been awarded the Silver Sudler Scroll, awarded by the John Philip Sousa Foundation "recognizing community and adult concert bands of outstanding musical excellence." Other honors include invitations to perform for the conference of the Pennsylvania Music Educators Association and the national convention of the Association of Concert Bands. William Kenny, the band's founder and conductor, is professor of music at Bucknell, where he has taught for the past 30 years.
                 </p>
-                <img src={Seal} alt />
-            </section>
+                <img src={Seal} alt='PCWB Seal' />
+            </AboutSection>
         </HomepageWrapper>
         
     )

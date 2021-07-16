@@ -23,3 +23,8 @@ a, a:hover, a:focus, a:active {
 ul {
     list-style: none;
 }
+
+img {
+    width: 50%;
+    height: auto;
+}
