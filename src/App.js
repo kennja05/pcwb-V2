@@ -1,9 +1,12 @@
 import './App.css';
+
+import Nav from './nav.js';
 import Director from './pages/director.js';
 import Events from './pages/events.js';
 import Media from './pages/media.js';
 import Members from './pages/members.js';
 import Homepage from './pages/homepage.js';
+
 import {
   BrowserRouter as Router, 
   Switch,
@@ -25,6 +28,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Nav></Nav>
         <Switch>
           <Route exact path='/director'>
             <Director />
