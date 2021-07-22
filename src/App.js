@@ -28,7 +28,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav></Nav>
+        <Nav {...colors}></Nav>
         <Switch>
           <Route exact path='/director'>
             <Director />
