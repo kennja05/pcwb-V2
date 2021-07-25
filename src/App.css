@@ -29,12 +29,15 @@ img {
     height: auto;
 }
 
-nav:nth-child(2){
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /*todo update navlink from nav bar
 .active {
     color: green;
 }
 */
+
+.mySpan {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
