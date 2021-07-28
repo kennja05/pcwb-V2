@@ -21,6 +21,7 @@ function App() {
     white: '#fbfbfb',
     offWhite: '#fbedda',
     orange: '#f37955',
+    darkOrange: '#d55b37',
     black: '#040404',
     gray: '#777'
   }

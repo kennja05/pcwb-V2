@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -19,36 +19,26 @@ const NavBar = styled.nav`
     text-align: right;
     
     & a:nth-of-type(even){
-        border-bottom: .2rem solid #d55b37;
-        border-top: .2rem solid #d55b37;
+        border-bottom: .2rem solid ${props => props.darkOrange};
+        border-top: .2rem solid ${props => props.darkOrange};
     }
 
 `
 
-export default class Nav extends React.Component {
+export default function Nav(props) {
 
-    state = {
-        active: true
-    };
-
-    toggleMenu = () => {
-        this.setState({
-            active: !this.state.active
-        });
-    };
-
-    render(){
-        const {active} = this.state
-        return(
-            <div>
-            <span onClick={this.toggleMenu} className='mySpan'>open menu</span>     
-            <NavBar active={active} {...this.props}>
-                <button onClick={this.toggleMenu}>×</button>
+    const [menu, setMenu] = useState(false);
+ 
+    return(
+        <div>
+            <span className='mySpan' onClick={() => setMenu(!menu)}>open menu</span>     
+            <NavBar active={menu} {...props}>
+                <button onClick={() => setMenu(!menu)}>×</button>
                 <NavLink exact to='/'>Homepage</NavLink>
                 <NavLink exact to='/director'>Director</NavLink>
                 <NavLink exact to='/media'>Media</NavLink>
             </NavBar>
-            </div>
-        )
-    }
+        </div>
+    )
+    
 }
