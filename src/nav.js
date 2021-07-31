@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -9,8 +9,14 @@ const NavBar = styled.nav`
     position: fixed;
     height: 100vh;
     top: 0;
-    left: ${props => props.active ? '0' : '-20rem'};
-    width: 20rem;
+    @media (min-width: 481px){
+        left: ${props => props.active ? '0' : '-20rem'};
+        width: 20rem;
+    }
+    @media (max-width: 480px){
+        width: 100vw;
+        left: ${props => props.active ? '0' : '-100vw'};
+    }
     transition: left 1s;
     display: flex;
     align-items: stretch;
@@ -26,6 +32,10 @@ const NavBar = styled.nav`
         border-top: .2rem solid ${props => props.darkOrange};
     }
 
+    & a {
+        padding-right: 1rem;
+    }
+
 `
 
 const SpanIcon = styled.span`
@@ -39,7 +49,9 @@ const SpanIcon = styled.span`
 export default function Nav(props) {
 
     const [menu, setMenu] = useState(false);
- 
+    useEffect(() => {
+        console.log(window.location.pathname);
+    });
     return(
         <div>
             <SpanIcon onClick={() => setMenu(!menu)}>
@@ -49,9 +61,9 @@ export default function Nav(props) {
                 <button onClick={() => setMenu(!menu)}>
                     <FontAwesomeIcon icon={faTimes} />
                 </button>
-                <NavLink exact to='/'>Homepage</NavLink>
-                <NavLink exact to='/director'>Director</NavLink>
-                <NavLink exact to='/media'>Media</NavLink>
+                <NavLink onClick={() => setMenu(!menu)} exact to='/'>Homepage</NavLink>
+                <NavLink onClick={() => setMenu(!menu)} exact to='/director'>Director</NavLink>
+                <NavLink onClick={() => setMenu(!menu)} exact to='/media'>Media</NavLink>
             </NavBar>
         </div>
     )
