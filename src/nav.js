@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+
 const NavBar = styled.nav`
     position: fixed;
     height: 100vh;
@@ -25,15 +28,27 @@ const NavBar = styled.nav`
 
 `
 
+const SpanIcon = styled.span`
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    z-index: 2;
+    font-size: 3rem;
+`
+
 export default function Nav(props) {
 
     const [menu, setMenu] = useState(false);
  
     return(
         <div>
-            <span className='mySpan' onClick={() => setMenu(!menu)}>open menu</span>     
+            <SpanIcon onClick={() => setMenu(!menu)}>
+                <FontAwesomeIcon icon={faBars} color={props.offWhite}/>    
+            </SpanIcon>     
             <NavBar active={menu} {...props}>
-                <button onClick={() => setMenu(!menu)}>×</button>
+                <button onClick={() => setMenu(!menu)}>
+                    <FontAwesomeIcon icon={faTimes} />
+                </button>
                 <NavLink exact to='/'>Homepage</NavLink>
                 <NavLink exact to='/director'>Director</NavLink>
                 <NavLink exact to='/media'>Media</NavLink>

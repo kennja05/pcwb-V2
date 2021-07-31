@@ -35,9 +35,15 @@ img {
 }
 */
 
-.mySpan {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    display: inline;
+    text-align: left;
+    text-indent: 1rem;
 }
