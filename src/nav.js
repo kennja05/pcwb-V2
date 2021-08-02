@@ -49,9 +49,11 @@ const SpanIcon = styled.span`
 export default function Nav(props) {
 
     const [menu, setMenu] = useState(false);
+    const [location, setLocation] = useState('')
     useEffect(() => {
-        console.log(window.location.pathname);
+        setLocation(window.location.pathname, []);
     });
+    console.log(location)
     return(
         <div>
             <SpanIcon onClick={() => setMenu(!menu)}>
@@ -61,9 +63,9 @@ export default function Nav(props) {
                 <button onClick={() => setMenu(!menu)}>
                     <FontAwesomeIcon icon={faTimes} />
                 </button>
-                <NavLink onClick={() => setMenu(!menu)} exact to='/'>Homepage</NavLink>
-                <NavLink onClick={() => setMenu(!menu)} exact to='/director'>Director</NavLink>
-                <NavLink onClick={() => setMenu(!menu)} exact to='/media'>Media</NavLink>
+                <NavLink className={location === '/' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/'>Homepage</NavLink>
+                <NavLink className={location === '/director' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
+                <NavLink className={location === '/media' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/media'>Media</NavLink>
             </NavBar>
         </div>
     )

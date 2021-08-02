@@ -47,3 +47,11 @@ button {
     text-align: left;
     text-indent: 1rem;
 }
+
+.active {
+    color: blue;
+}
+
+.inactive {
+    color: purple;
+}
