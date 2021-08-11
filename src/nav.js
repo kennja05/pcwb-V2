@@ -26,11 +26,10 @@ const NavBar = styled.nav`
     z-index: 3;
     font-size: 3rem;
     text-align: right;
-    & a:nth-of-type(even){
+    & span:nth-of-type(even){
         border-bottom: .2rem solid ${props => props.darkOrange};
         border-top: .2rem solid ${props => props.darkOrange};
     }
-
     & a {
         padding-right: 1rem;
     }
@@ -38,7 +37,7 @@ const NavBar = styled.nav`
 `
 
 const StyledLink = styled.span`
-    color: ${props => props.currLocation ? 'white' : 'green'};
+    color: ${props => props.currLocation ? props.darkBlue2 : props.offWhite};
 `
 
 const SpanIcon = styled.span`
@@ -47,6 +46,22 @@ const SpanIcon = styled.span`
     left: 1rem;
     z-index: 2;
     font-size: 3rem;
+    color: ${props => props.offWhite};
+    &:hover{
+        cursor: pointer;
+    }
+`
+
+const StyledButton = styled.button`
+    background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+    outline: inherit;
+    display: inline;
+    text-align: left;
+    text-indent: 1rem;
 `
 
 export default function Nav(props) {
@@ -62,16 +77,16 @@ export default function Nav(props) {
                 <FontAwesomeIcon icon={faBars} color={props.offWhite}/>    
             </SpanIcon>     
             <NavBar active={menu} {...props}>
-                <button onClick={() => setMenu(!menu)}>
-                    <FontAwesomeIcon icon={faTimes} />
-                </button>
-                <StyledLink currLocation={path === '/' ? true : false}>
+                <StyledButton onClick={() => setMenu(!menu)}>
+                    <FontAwesomeIcon icon={faTimes} color={props.offWhite}/>
+                </StyledButton>
+                <StyledLink currLocation={path === '/' ? true : false} {...props}>
                     <NavLink onClick={() => setMenu(!menu)} to='/'>Homepage</NavLink>
                 </StyledLink>
-                <StyledLink currLocation={path === '/director' ? true : false}>
+                <StyledLink currLocation={path === '/director' ? true : false} {...props}>
                     <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
                 </StyledLink>
-                <StyledLink currLocation={path === '/media' ? true : false}>
+                <StyledLink currLocation={path === '/media' ? true : false} {...props}>
                     <NavLink onClick={() => setMenu(!menu)} to='/media'>Media</NavLink>
                 </StyledLink>
             </NavBar>
