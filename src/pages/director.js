@@ -1,7 +1,26 @@
+import styled from 'styled-components'
+
+import RecordsBackground from '../assets/images/records.jpg'
+
+const DirectorHeader = styled.header`
+    background-image: url(${RecordsBackground});
+    min-height: 75vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
 export default function Director(){
     return(
         <div>
-            <h1>Dr. William Kenny</h1>
+            <DirectorHeader>
+                <h1>Dr. William Kenny</h1>
+            </DirectorHeader>
             <article>
                 <section>
                     <p>
