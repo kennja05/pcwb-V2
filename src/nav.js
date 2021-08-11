@@ -22,11 +22,10 @@ const NavBar = styled.nav`
     align-items: stretch;
     flex-direction: column; 
     background: ${props => props.orange};
-    color: ${props => props.offWhite};
+    
     z-index: 3;
     font-size: 3rem;
     text-align: right;
-    
     & a:nth-of-type(even){
         border-bottom: .2rem solid ${props => props.darkOrange};
         border-top: .2rem solid ${props => props.darkOrange};
@@ -36,6 +35,10 @@ const NavBar = styled.nav`
         padding-right: 1rem;
     }
 
+`
+
+const StyledLink = styled.span`
+    color: ${props => props.currLocation ? 'white' : 'green'};
 `
 
 const SpanIcon = styled.span`
@@ -49,11 +52,10 @@ const SpanIcon = styled.span`
 export default function Nav(props) {
 
     const [menu, setMenu] = useState(false);
-    const [location, setLocation] = useState('')
+    const [path, setPath] = useState('')
     useEffect(() => {
-        setLocation(window.location.pathname, []);
-    });
-    console.log(location)
+        setPath(window.location.pathname);
+    }, [menu]);
     return(
         <div>
             <SpanIcon onClick={() => setMenu(!menu)}>
@@ -63,9 +65,15 @@ export default function Nav(props) {
                 <button onClick={() => setMenu(!menu)}>
                     <FontAwesomeIcon icon={faTimes} />
                 </button>
-                <NavLink className={location === '/' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/'>Homepage</NavLink>
-                <NavLink className={location === '/director' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
-                <NavLink className={location === '/media' ? 'active' : 'inactive'} onClick={() => setMenu(!menu)} to='/media'>Media</NavLink>
+                <StyledLink currLocation={path === '/' ? true : false}>
+                    <NavLink onClick={() => setMenu(!menu)} to='/'>Homepage</NavLink>
+                </StyledLink>
+                <StyledLink currLocation={path === '/director' ? true : false}>
+                    <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
+                </StyledLink>
+                <StyledLink currLocation={path === '/media' ? true : false}>
+                    <NavLink onClick={() => setMenu(!menu)} to='/media'>Media</NavLink>
+                </StyledLink>
             </NavBar>
         </div>
     )

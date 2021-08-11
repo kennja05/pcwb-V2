@@ -29,12 +29,6 @@ img {
     height: auto;
 }
 
-/*todo update navlink from nav bar
-.active {
-    color: green;
-}
-*/
-
 button {
     background: none;
 	color: inherit;
@@ -46,12 +40,4 @@ button {
     display: inline;
     text-align: left;
     text-indent: 1rem;
-}
-
-.active {
-    color: blue;
-}
-
-.inactive {
-    color: purple;
 }
