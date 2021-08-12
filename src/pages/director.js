@@ -25,11 +25,16 @@ const StyledH1 = styled.h1`
 const StyledArticle = styled.article`
     background-color: ${props => props.offWhite};
     color: ${props => props.darkBlue2};
+    padding: 5rem;
+    font-size: 2rem;
     & section {
         width: 50%;
+        line-height: 2.2rem;
         &:first-letter {
             font-size: 3rem;
-        }
+            color: ${props => props.darkBlue};
+        };
+        text-indent: 2rem;
     };
     display: flex;
     flex-direction: column;
