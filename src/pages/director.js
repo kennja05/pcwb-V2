@@ -15,13 +15,36 @@ const DirectorHeader = styled.header`
     align-items: center;
 `
 
-export default function Director(){
+const StyledH1 = styled.h1`
+    color: ${props => props.offWhite};
+    border-top: .5rem solid ${props => props.orange};
+    border-bottom: .5rem solid ${props => props.orange};
+    font-size: 4rem;
+`
+
+const StyledArticle = styled.article`
+    background-color: ${props => props.offWhite};
+    color: ${props => props.darkBlue2};
+    & section {
+        width: 50%;
+        &:first-letter {
+            font-size: 3rem;
+        }
+    };
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+
+`
+
+export default function Director(props){
     return(
         <div>
             <DirectorHeader>
-                <h1>Dr. William Kenny</h1>
+                <StyledH1 {...props}>Dr. William Kenny</StyledH1>
             </DirectorHeader>
-            <article>
+            <StyledArticle {...props}>
                 <section>
                     <p>
                         William Kenny is Professor of Music at Bucknell University where for the past thirty years he has conducted the university Symphonic Band and taught such courses as Conducting, Instrumental Methods, Music Theory, Jazz History, Brass and Percussion Methods, and Orchestration. He also teaches French horn, and, for many years, led the University Jazz Band having moved the band from a club activity to an integral part of the music department's curricular ensemble offerings. More recently, he accepted the leadership role of the university's Bison Band, and after a 25 year absence from working with athletic bands—and much to his surprise—has enjoyed that a great deal.
@@ -29,7 +52,7 @@ export default function Director(){
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
                     </p>
-                    <img src='' />
+                    <img src='' alt=''/>
                 </section>
                 <section>
                     <p>
@@ -45,7 +68,7 @@ export default function Director(){
                         A graduate of Oregon State University, Kenny received both his master's degree and doctorate in music education from the University of Illinois. He lives in Lewisburg with his wife, Amy—his Bison Band co conspirator and one of the fine flutists in the PCWB.
                     </p>
                 </section>
-            </article>
+            </StyledArticle>
         </div>
     )
 }

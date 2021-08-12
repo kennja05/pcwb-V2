@@ -32,7 +32,7 @@ function App() {
         <Nav {...colors}></Nav>
         <Switch>
           <Route exact path='/director'>
-            <Director />
+            <Director {...colors}/>
           </Route>
           <Route exact path='/events'>
             <Events />
