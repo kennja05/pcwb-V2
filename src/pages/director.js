@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
-import RecordsBackground from '../assets/images/records.jpg'
+import RecordsBackground from '../assets/images/babyYoda.jpg'
+import BillKenny from '../assets/images/BillKenny.jpg'
 
 const DirectorHeader = styled.header`
+    position: sticky;
+    bottom: 3rem;
     background-image: url(${RecordsBackground});
     min-height: 75vh;
     background-attachment: fixed;
@@ -35,6 +38,9 @@ const StyledArticle = styled.article`
             color: ${props => props.darkBlue};
         };
         text-indent: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     };
     display: flex;
     flex-direction: column;
@@ -57,7 +63,7 @@ export default function Director(props){
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
                     </p>
-                    <img src='' alt=''/>
+                    <img src={BillKenny} alt=''/>
                 </section>
                 <section>
                     <p>

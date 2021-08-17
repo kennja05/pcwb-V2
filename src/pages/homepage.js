@@ -116,6 +116,11 @@ const MainHeaderTitleBox = styled.div`
     }
 `
 
+const PCWBSeal = styled.img`
+    width: 50%;
+    height: auto;
+`
+
 export default function Homepage(props) {
     
     return(
@@ -142,7 +147,7 @@ export default function Homepage(props) {
                 <p>
                     The PCWB, founded in 1994, is one of the few select ensembles to have been awarded the Silver Sudler Scroll, awarded by the John Philip Sousa Foundation "recognizing community and adult concert bands of outstanding musical excellence." Other honors include invitations to perform for the conference of the Pennsylvania Music Educators Association and the national convention of the Association of Concert Bands. William Kenny, the band's founder and conductor, is professor of music at Bucknell, where he has taught for the past 30 years.
                 </p>
-                <img src={Seal} alt='PCWB Seal' />
+                <PCWBSeal src={Seal} alt='PCWB Seal' />
             </AboutSection>
         </HomepageWrapper>
         
