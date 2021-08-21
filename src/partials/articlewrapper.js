@@ -4,6 +4,6 @@ export const ArticleWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(#f37955,#262c40);
+    background: linear-gradient(${props => props.orange},${props => props.light ? props.darkBlue : props.offWhite});
     padding-top: 1rem;
 `

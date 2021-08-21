@@ -4,6 +4,9 @@ import {ArticleWrapper} from '../partials/articlewrapper'
 
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg'
 import BillKenny from '../assets/images/BillKenny.jpg'
+import Bk2 from '../assets/images/BillKennyConducting.jpg'
+import Bk2Cropped from '../assets/images/BillKennyConductingCropped.jpg'
+import BillKennySmiling from '../assets/images/BillKennySmiling.jpg'
 
 const DirectorHeader = styled.header`
     position: sticky;
@@ -28,10 +31,10 @@ const StyledH1 = styled.h1`
 `
 
 const StyledArticle = styled.article`
-    width: 80%;
-     background-color: ${props => props.offWhite};
+    width: 90%;
+    background-color: ${props => props.offWhite};
     color: ${props => props.darkBlue2};
-    padding: 5rem;
+    padding: 5rem 0rem 5rem 0rem;
     font-size: 2rem;
     & section {
         width: 50%;
@@ -58,7 +61,7 @@ export default function Director(props){
             <DirectorHeader>
                 <StyledH1 {...props}>Dr. William Kenny</StyledH1>
             </DirectorHeader>
-            <ArticleWrapper>
+            <ArticleWrapper {...props} light={true}>
             <StyledArticle {...props}>
                 <section>
                     <p>
@@ -67,7 +70,12 @@ export default function Director(props){
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
                     </p>
-                    <img src={BillKenny} alt=''/>
+                    
+                </section>
+                <section>
+                    <img src={BillKenny} alt='' />
+                    <img src={Bk2} alt='' />
+                    <img src={BillKennySmiling} alt=''/>
                 </section>
                 <section>
                     <p>
