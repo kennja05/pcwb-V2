@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 
-import RecordsBackground from '../assets/images/babyYoda.jpg'
+import {ArticleWrapper} from '../partials/articlewrapper'
+
+import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg'
 import BillKenny from '../assets/images/BillKenny.jpg'
 
 const DirectorHeader = styled.header`
     position: sticky;
     bottom: 3rem;
-    background-image: url(${RecordsBackground});
+    background-image: linear-gradient(to right bottom, rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.5)),url(${BillKennyTimeline});
     min-height: 75vh;
     background-attachment: fixed;
     background-position: center;
@@ -26,7 +28,8 @@ const StyledH1 = styled.h1`
 `
 
 const StyledArticle = styled.article`
-    background-color: ${props => props.offWhite};
+    width: 80%;
+     background-color: ${props => props.offWhite};
     color: ${props => props.darkBlue2};
     padding: 5rem;
     font-size: 2rem;
@@ -55,6 +58,7 @@ export default function Director(props){
             <DirectorHeader>
                 <StyledH1 {...props}>Dr. William Kenny</StyledH1>
             </DirectorHeader>
+            <ArticleWrapper>
             <StyledArticle {...props}>
                 <section>
                     <p>
@@ -80,6 +84,7 @@ export default function Director(props){
                     </p>
                 </section>
             </StyledArticle>
+            </ArticleWrapper>
         </div>
     )
 }
