@@ -52,7 +52,40 @@ const StyledArticle = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center
+`
 
+const PhotoGrid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "main square1"
+        "main square2";
+    height: 75vh;
+    border: 1px solid orange;
+    &:first-child{
+        background-color: blue;
+        grid-row: 1/3;
+        grid-column: 1
+        border: 1px solid black;
+        width: 20px;
+        height:  20px;
+    }
+    & div:nth-child(2){
+        background-color: orange;
+        grid-row: 1/2;
+        grid-column: 2;
+        width: 20px;
+        height:  20px;
+    }
+
+    & div:nth-child(3){
+        background-color: green;
+        grid-row: 2;
+        grid-column: 2;
+        width: 20px;
+        height:  20px;
+    }
 `
 
 export default function Director(props){
@@ -73,9 +106,14 @@ export default function Director(props){
                     
                 </section>
                 <section>
-                    <img src={BillKenny} alt='' />
-                    <img src={Bk2} alt='' />
-                    <img src={BillKennySmiling} alt=''/>
+                    <PhotoGrid>
+                        {/* <img src={BillKenny} alt='' />
+                        <img src={Bk2} alt='' />
+                        <img src={BillKennySmiling} alt=''/> */}
+                        <div>a</div>
+                        <div>f</div>
+                        <div>c</div>
+                    </PhotoGrid>   
                 </section>
                 <section>
                     <p>
