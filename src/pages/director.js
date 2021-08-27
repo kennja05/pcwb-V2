@@ -56,35 +56,23 @@ const StyledArticle = styled.article`
 
 const PhotoGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "main square1"
-        "main square2";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     height: 75vh;
-    border: 1px solid orange;
+    width: 120%;
+    grid-gap: 1rem;
     &:first-child{
-        background-color: blue;
-        grid-row: 1/3;
-        grid-column: 1
-        border: 1px solid black;
-        width: 20px;
-        height:  20px;
+        grid-area: 1 / 1 / 3 / 2;
+        background-image: url(${BillKenny});
     }
     & div:nth-child(2){
-        background-color: orange;
-        grid-row: 1/2;
-        grid-column: 2;
-        width: 20px;
-        height:  20px;
+        grid-area: 1 / 2 / 2 / 3;
+        background-image: url(${BillKennySmiling});
     }
 
     & div:nth-child(3){
-        background-color: green;
-        grid-row: 2;
-        grid-column: 2;
-        width: 20px;
-        height:  20px;
+        grid-area: 2 / 2 / 3 / 3;
+        background-image: url(${Bk2});
     }
 `
 
