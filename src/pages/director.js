@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import {ArticleWrapper} from '../partials/articlewrapper'
+import {StyledArticle} from '../partials/article'
 
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg'
 import BillKenny from '../assets/images/BillKenny.jpg'
@@ -30,28 +31,9 @@ const StyledH1 = styled.h1`
     font-size: 4rem;
 `
 
-const StyledArticle = styled.article`
-    width: 90%;
+const DirectorArticle = styled(StyledArticle)`
     background-color: ${props => props.offWhite};
     color: ${props => props.darkBlue2};
-    padding: 5rem 0rem 5rem 0rem;
-    font-size: 2rem;
-    & section {
-        width: 50%;
-        line-height: 2.2rem;
-        &:first-letter {
-            font-size: 3rem;
-            color: ${props => props.darkBlue};
-        };
-        text-indent: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    };
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center
 `
 
 const PhotoGrid = styled.div`
@@ -91,7 +73,7 @@ export default function Director(props){
                 <StyledH1 {...props}>Dr. William Kenny</StyledH1>
             </DirectorHeader>
             <ArticleWrapper {...props} light={true}>
-            <StyledArticle {...props}>
+            <DirectorArticle {...props}>
                 <section>
                     <p>
                         William Kenny is Professor of Music at Bucknell University where for the past thirty years he has conducted the university Symphonic Band and taught such courses as Conducting, Instrumental Methods, Music Theory, Jazz History, Brass and Percussion Methods, and Orchestration. He also teaches French horn, and, for many years, led the University Jazz Band having moved the band from a club activity to an integral part of the music department's curricular ensemble offerings. More recently, he accepted the leadership role of the university's Bison Band, and after a 25 year absence from working with athletic bands—and much to his surprise—has enjoyed that a great deal.
@@ -121,7 +103,7 @@ export default function Director(props){
                         A graduate of Oregon State University, Kenny received both his master's degree and doctorate in music education from the University of Illinois. He lives in Lewisburg with his wife, Amy—his Bison Band co conspirator and one of the fine flutists in the PCWB.
                     </p>
                 </section>
-            </StyledArticle>
+            </DirectorArticle>
             </ArticleWrapper>
         </div>
     )
