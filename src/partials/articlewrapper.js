@@ -6,4 +6,5 @@ export const ArticleWrapper = styled.div`
     align-items: center;
     background: linear-gradient(${props => props.orange},${props => props.light ? props.darkBlue : props.offWhite});
     padding-top: 1rem;
+    padding-bottom: 1rem;
 `

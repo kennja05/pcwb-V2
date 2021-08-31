@@ -59,11 +59,19 @@ const PhotoGrid = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 75vh;
-    width: 120%;
+    width: 100%;
     grid-gap: 1rem;
+    & div {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    };
     &:first-child{
         grid-area: 1 / 1 / 3 / 2;
         background-image: url(${BillKenny});
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     & div:nth-child(2){
         grid-area: 1 / 2 / 2 / 3;
@@ -90,17 +98,13 @@ export default function Director(props){
                     </p>
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
-                    </p>
-                    
+                    </p>               
                 </section>
                 <section>
                     <PhotoGrid>
-                        {/* <img src={BillKenny} alt='' />
-                        <img src={Bk2} alt='' />
-                        <img src={BillKennySmiling} alt=''/> */}
-                        <div>a</div>
-                        <div>f</div>
-                        <div>c</div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </PhotoGrid>   
                 </section>
                 <section>
