@@ -1,6 +1,9 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
+import {article} from '../partials/article';
+import {articleWrapper} from '../partials/articlewrapper';
+
 import TrumpetBackground from '../assets/images/trumpet.jpg';
 import Seal from '../assets/images/seal.png';
 

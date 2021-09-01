@@ -2,8 +2,8 @@ import {useState, useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = styled.nav`
     position: fixed;
@@ -81,7 +81,7 @@ export default function Nav(props) {
                     <FontAwesomeIcon icon={faTimes} color={props.offWhite}/>
                 </StyledButton>
                 <StyledLink currLocation={path === '/' ? true : false} {...props}>
-                    <NavLink onClick={() => setMenu(!menu)} to='/'>Homepage</NavLink>
+                    <NavLink onClick={() => setMenu(!menu)} to='/'>Home</NavLink>
                 </StyledLink>
                 <StyledLink currLocation={path === '/director' ? true : false} {...props}>
                     <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
