@@ -1,8 +1,8 @@
 import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
-import {article} from '../partials/article';
-import {articleWrapper} from '../partials/articlewrapper';
+import {Article} from '../partials/article';
+import {ArticleWrapper} from '../partials/articlewrapper';
 
 import TrumpetBackground from '../assets/images/trumpet.jpg';
 import Seal from '../assets/images/seal.png';
@@ -142,6 +142,8 @@ export default function Homepage(props) {
                     </MainHeaderTitleBox>
                 </MainHeader> 
             </HomepageHeader>
+            <ArticleWrapper {...props}>
+
             <AboutSection {...props}>
                 <h2>About Us</h2>
                 <p>
@@ -152,6 +154,8 @@ export default function Homepage(props) {
                 </p>
                 <PCWBSeal src={Seal} alt='PCWB Seal' />
             </AboutSection>
+            </ArticleWrapper>
+
         </HomepageWrapper>
         
     )

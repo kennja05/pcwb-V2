@@ -15,5 +15,8 @@ export const StyledArticle = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow:  inset 2.2rem 2.2rem 4.4rem ${props => props.gray},
+    inset -2.2rem -2.2rem 4.4rem ${props => props.offWhite};
 `
