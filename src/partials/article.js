@@ -17,6 +17,6 @@ export const StyledArticle = styled.article`
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    box-shadow:  inset 2.2rem 2.2rem 4.4rem ${props => props.gray},
-    inset -2.2rem -2.2rem 4.4rem ${props => props.offWhite};
+    box-shadow:  inset 2.2rem 1.2rem 4.4rem ${props => props.gray},
+    inset -2.2rem -2.2rem 4.4rem ${props => props.darkBlue2};
 `
