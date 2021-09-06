@@ -36,33 +36,36 @@ const DirectorArticle = styled(StyledArticle)`
     color: ${props => props.darkBlue2};
 `
 
-const PhotoGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+const PhotoContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media only screen and (max-width: 900) {
+        flex-direction: column;    
+    }
+    margin: 1rem 0 1rem 0;
     height: 75vh;
     width: 100%;
-    grid-gap: 1rem;
     & div {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     };
-    &:first-child{
-        grid-area: 1 / 1 / 3 / 2;
+    & div:nth-child(1){
         background-image: url(${BillKenny});
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        width: 30%;
+        height: 100%;
     }
     & div:nth-child(2){
-        grid-area: 1 / 2 / 2 / 3;
         background-image: url(${BillKennySmiling});
+        width: 30%;
+        height: auto;
     }
 
     & div:nth-child(3){
-        grid-area: 2 / 2 / 3 / 3;
         background-image: url(${Bk2});
+        width: 30%;
+        height: 100%;
     }
 `
 
@@ -82,13 +85,11 @@ export default function Director(props){
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
                     </p>               
                 </section>
-                <section>
-                    <PhotoGrid>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </PhotoGrid>   
-                </section>
+                <PhotoContainer>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </PhotoContainer>   
                 <section>
                     <p>
                         In addition to conducting regional high school county and district band festivals, ensembles under Kenny’s direction have been selected to perform for the Pennsylvania Music Educators Association Conference, the Eastern Conference of the College Band Directors National Association, and for the national convention of the Association of Concert Bands. Articles he has written have appeared in prominent music publications including the Music Educators Journal and The Instrumentalist.
