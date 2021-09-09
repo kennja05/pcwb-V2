@@ -44,29 +44,12 @@ const PhotoContainer = styled.div`
         flex-direction: column;    
     }
     margin: 1rem 0 1rem 0;
-    height: 75vh;
     width: 100%;
-    & div {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    };
-    & div:nth-child(1){
-        background-image: url(${BillKenny});
-        width: 30%;
-        height: 100%;
-    }
-    & div:nth-child(2){
-        background-image: url(${BillKennySmiling});
+    & img {
         width: 30%;
         height: auto;
-    }
-
-    & div:nth-child(3){
-        background-image: url(${Bk2});
-        width: 30%;
-        height: 100%;
-    }
+        border-radius: 1rem;
+    };
 `
 
 export default function Director(props){
@@ -86,9 +69,9 @@ export default function Director(props){
                     </p>               
                 </section>
                 <PhotoContainer>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <img src={BillKennySmiling} alt=''/>
+                    <img src={BillKenny} alt=''/>
+                    <img src={Bk2} alt='' />
                 </PhotoContainer>   
                 <section>
                     <p>

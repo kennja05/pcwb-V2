@@ -22,7 +22,6 @@ const NavBar = styled.nav`
     align-items: stretch;
     flex-direction: column; 
     background: ${props => props.orange};
-    
     z-index: 3;
     font-size: 3rem;
     text-align: right;
@@ -66,7 +65,10 @@ const StyledButton = styled.button`
 
 export default function Nav(props) {
 
+    //Open and close nav menu 
     const [menu, setMenu] = useState(false);
+    
+    //determine url and update when new link is clicked
     const [path, setPath] = useState('')
     useEffect(() => {
         setPath(window.location.pathname);
