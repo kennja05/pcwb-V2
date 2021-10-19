@@ -111,11 +111,11 @@ const MainHeaderTitleBox = styled.div`
     &:before {
         left: 0;
         top: 0%;
-    }
+    };
     &:after {
         left: 0;
         bottom: 0%;
-    }
+    };
 `
 
 const PCWBSeal = styled.img`

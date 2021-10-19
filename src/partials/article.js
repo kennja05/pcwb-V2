@@ -5,7 +5,7 @@ export const StyledArticle = styled.article`
     padding: 5rem 0rem 5rem 0rem;
     font-size: 2rem;
     & section {
-        width: 50%;
+        width: 70%;
         line-height: 2.2rem;
         text-indent: 2rem;
         display: flex;
@@ -16,7 +16,6 @@ export const StyledArticle = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow:  inset 2.2rem 1.2rem 4.4rem ${props => props.gray},
-    inset -2.2rem -2.2rem 4.4rem ${props => props.darkBlue2};
+    border-radius: .5rem;
+    
 `
