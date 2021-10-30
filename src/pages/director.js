@@ -6,7 +6,7 @@ import {StyledArticle} from '../partials/article';
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg';
 import BillKenny from '../assets/images/BillKenny.jpg';
 import Bk2 from '../assets/images/BillKennyConducting.jpg';
-import Bk2Cropped from '../assets/images/BillKennyConductingCropped.jpg';
+//import Bk2Cropped from '../assets/images/BillKennyConductingCropped.jpg';
 import BillKennySmiling from '../assets/images/BillKennySmiling.jpg';
 
 const DirectorHeader = styled.header`
