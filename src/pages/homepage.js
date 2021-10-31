@@ -12,14 +12,6 @@ const HomepageWrapper = styled.div`
     background: linear-gradient(to top, ${props => props.darkBlue2}, ${props => props.darkBlue});
 `
 
-const AboutSection = styled(StyledArticle)`
-    color: ${props => props.offWhite};
-    background-color: ${props => props.darkBlue};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-
 const HomepageHeader = styled.header`
     text-align: center;
     display: grid;
@@ -143,7 +135,7 @@ export default function Homepage(props) {
             </HomepageHeader>
             <ArticleWrapper {...props}>
 
-            <AboutSection {...props}>
+            <StyledArticle {...props}>
                 <h2>About Us</h2>
                 <section>
                 <p>
@@ -154,7 +146,7 @@ export default function Homepage(props) {
                 </p>
                 <PCWBSeal src={Seal} alt='PCWB Seal' />
                 </section>
-            </AboutSection>
+            </StyledArticle>
             </ArticleWrapper>
 
         </HomepageWrapper>
