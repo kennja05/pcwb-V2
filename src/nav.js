@@ -17,7 +17,7 @@ const NavBar = styled.nav`
         width: 100vw;
         left: ${props => props.active ? '0' : '-100vw'};
     }
-    transition: left 1s;
+    transition: left .3s;
     display: flex;
     align-items: stretch;
     flex-direction: column; 
