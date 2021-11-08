@@ -15,7 +15,7 @@ const NavBar = styled.nav`
     }
     @media (max-width: 480px){
         width: 100vw;
-        left: ${props => props.active ? '0' : '-100vw'};
+        left: ${props => props.active ? '0' : '-200vw'};
     }
     transition: left .3s;
     display: flex;
@@ -37,6 +37,9 @@ const NavBar = styled.nav`
 
 const StyledLink = styled.span`
     color: ${props => props.currLocation ? props.darkBlue2 : props.offWhite};
+    &:hover {
+        color: ${props => props.darkBlue};
+    };
 `
 
 const SpanIcon = styled.span`
@@ -46,7 +49,7 @@ const SpanIcon = styled.span`
     z-index: 2;
     font-size: 3rem;
     color: ${props => props.offWhite};
-    &:hover{
+    & a:hover{
         cursor: pointer;
     }
 `
@@ -73,6 +76,7 @@ export default function Nav(props) {
     useEffect(() => {
         setPath(window.location.pathname);
     }, [menu]);
+
     return(
         <div>
             <SpanIcon onClick={() => setMenu(!menu)}>
@@ -82,9 +86,13 @@ export default function Nav(props) {
                 <StyledButton onClick={() => setMenu(!menu)}>
                     <FontAwesomeIcon icon={faTimes} color={props.offWhite}/>
                 </StyledButton>
-                <StyledLink currLocation={path === '/' ? true : false} {...props}>
-                    <NavLink onClick={() => setMenu(!menu)} to='/'>Home</NavLink>
-                </StyledLink>
+                
+                    <NavLink onClick={() => setMenu(!menu)} to='/'>
+                    <StyledLink currLocation={path === '/' ? true : false} {...props}>
+                        Home
+                        </StyledLink>
+
+                        </NavLink>
                 <StyledLink currLocation={path === '/director' ? true : false} {...props}>
                     <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
                 </StyledLink>
