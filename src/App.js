@@ -1,5 +1,7 @@
 import './App.css';
 
+import {ThemeProvider} from 'styled-components';
+
 import Nav from './nav.js';
 import Director from './pages/director.js';
 import Events from './pages/events.js';
@@ -12,6 +14,17 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
+const theme = {
+    darkBlue: '#262c40',
+    darkBlue2: '#192333',
+    white: '#fbfbfb',
+    offWhite: '#fbedda',
+    orange: '#f37955',
+    darkOrange: '#d55b37',
+    black: '#040404',
+    gray: '#777'
+}
 
 function App() {
 
@@ -29,6 +42,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ThemeProvider theme={theme}>
         <Nav {...colors}></Nav>
         <Switch>
           <Route exact path='/director'>
@@ -47,6 +61,7 @@ function App() {
             <Homepage {...colors}/>
           </Route>
         </Switch>
+        </ThemeProvider>
       </div>
     </Router>
   );

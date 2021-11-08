@@ -9,7 +9,7 @@ import Seal from '../assets/images/seal.png';
 
 const HomepageWrapper = styled.div`
     font-size: 2.5rem;
-    background: linear-gradient(to top, ${props => props.darkBlue2}, ${props => props.darkBlue});
+    background: linear-gradient(to top, ${props => props.theme.darkBlue2}, ${props => props.theme.darkBlue});
 `
 
 const HomepageHeader = styled.header`
@@ -37,7 +37,7 @@ const lineDrawToLeft = keyframes`
 const IntroHeader = styled.div`
     grid-area: header;
     z-index: 1;
-    background-color: ${props => props.darkBlue};
+    background-color: ${props => props.theme.darkBlue};
     animation: ${fadeOut} 1s 6s forwards;
     display: flex;
     flex-direction: column;
@@ -47,13 +47,13 @@ const IntroHeader = styled.div`
 
 const IntroTitleBox = styled.div`
     position: relative;
-    color: ${props => props.white};
+    color: ${props => props.theme.white};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
-        border-bottom: solid .5rem ${props => props.orange};
+        border-bottom: solid .5rem ${props => props.theme.orange};
         position: absolute;
     };
     &:before {
@@ -91,13 +91,13 @@ const MainHeader = styled.div`
 
 const MainHeaderTitleBox = styled.div`
     position: relative;
-    color: ${props => props.white};
+    color: ${props => props.theme.white};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
-        border-bottom: solid .5rem ${props => props.orange};
+        border-bottom: solid .5rem ${props => props.theme.orange};
         position: absolute;
     };
     &:before {
@@ -118,24 +118,24 @@ const PCWBSeal = styled.img`
 export default function Homepage(props) {
     
     return(
-        <HomepageWrapper {...props}>
+        <HomepageWrapper>
             <HomepageHeader>
-                <IntroHeader {...props}>
-                    <IntroTitleBox {...props}>
+                <IntroHeader>
+                    <IntroTitleBox>
                         <IntroH1>Penn Central Wind Band</IntroH1>
                         <IntroH2>William Kenny, Conductor</IntroH2>
                     </IntroTitleBox>
                 </IntroHeader> 
-                <MainHeader {...props}>
-                    <MainHeaderTitleBox {...props}>
+                <MainHeader>
+                    <MainHeaderTitleBox>
                         <h1>Penn Central Wind Band</h1>
                         <h2>William Kenny, Conductor</h2>
                     </MainHeaderTitleBox>
                 </MainHeader> 
             </HomepageHeader>
-            <ArticleWrapper {...props}>
+            <ArticleWrapper>
 
-            <StyledArticle {...props}>
+            <StyledArticle>
                 <h2>About Us</h2>
                 <section>
                 <p>
