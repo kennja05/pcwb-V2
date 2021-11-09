@@ -4,7 +4,7 @@ export const ArticleWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(${props => props.orange},${props => props.darkBlue});
+    background: linear-gradient(${props => props.theme.orange},${props => props.theme.darkBlue});
     padding-top: 1rem;
     padding-bottom: 1rem;
 `

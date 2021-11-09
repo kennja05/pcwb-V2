@@ -25,9 +25,9 @@ const DirectorHeader = styled.header`
 `
 
 const StyledH1 = styled.h1`
-    color: ${props => props.offWhite};
-    border-top: .5rem solid ${props => props.orange};
-    border-bottom: .5rem solid ${props => props.orange};
+    color: ${props => props.theme.offWhite};
+    border-top: .5rem solid ${props => props.theme.orange};
+    border-bottom: .5rem solid ${props => props.theme.orange};
     font-size: 4rem;
 `
 
@@ -51,10 +51,10 @@ export default function Director(props){
     return(
         <div>
             <DirectorHeader>
-                <StyledH1 {...props}>Dr. William Kenny</StyledH1>
+                <StyledH1>Dr. William Kenny</StyledH1>
             </DirectorHeader>
-            <ArticleWrapper {...props} light={true}>
-            <StyledArticle {...props}>
+            <ArticleWrapper>
+            <StyledArticle>
                 <section>
                     <p>
                         William Kenny is Professor of Music at Bucknell University where for the past thirty years he has conducted the university Symphonic Band and taught such courses as Conducting, Instrumental Methods, Music Theory, Jazz History, Brass and Percussion Methods, and Orchestration. He also teaches French horn, and, for many years, led the University Jazz Band having moved the band from a club activity to an integral part of the music department's curricular ensemble offerings. More recently, he accepted the leadership role of the university's Bison Band, and after a 25 year absence from working with athletic bands—and much to his surprise—has enjoyed that a great deal.

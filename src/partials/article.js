@@ -7,7 +7,6 @@ export const StyledArticle = styled.article`
     & section {
         width: 70%;
         line-height: 2.2rem;
-        text-indent: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -17,6 +16,6 @@ export const StyledArticle = styled.article`
     align-items: center;
     justify-content: center;
     border-radius: .5rem;
-    background-color: ${props => props.offWhite};
-    color: ${props => props.darkBlue2};
+    background-color: ${props => props.theme.offWhite};
+    color: ${props => props.theme.darkBlue2};
 `
