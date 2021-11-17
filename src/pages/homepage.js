@@ -38,7 +38,7 @@ const IntroHeader = styled.div`
     grid-area: header;
     z-index: 1;
     background-color: ${props => props.theme.darkBlue};
-    animation: ${fadeOut} 1s 6s forwards;
+    animation: ${fadeOut} 3s 6s forwards;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,12 +58,12 @@ const IntroTitleBox = styled.div`
     };
     &:before {
         left: 0;
-        top: 0%;
+        top: -1rem;
         animation: ${lineDrawToRight} .8s ease-in 4s backwards;
     }
     &:after {
         left: 0;
-        bottom: 0%;
+        bottom: -1rem;
         animation: ${lineDrawToLeft} .8s ease-in 4.8s backwards;
     }
 `
@@ -102,11 +102,11 @@ const MainHeaderTitleBox = styled.div`
     };
     &:before {
         left: 0;
-        top: 0%;
+        top: -1rem;
     };
     &:after {
         left: 0;
-        bottom: 0%;
+        bottom: -1rem;
     };
 `
 
