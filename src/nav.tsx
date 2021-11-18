@@ -5,7 +5,12 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-const NavBar = styled.nav`
+interface NavProps {
+    active: boolean;
+    orange: string;
+}
+
+const NavBar = styled.nav<NavProps>`
     position: fixed;
     height: 100vh;
     top: 0;

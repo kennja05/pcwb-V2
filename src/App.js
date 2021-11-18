@@ -2,12 +2,12 @@ import './App.css';
 
 import {ThemeProvider} from 'styled-components';
 
-import Nav from './nav.js';
-import Director from './pages/director.js';
-import Events from './pages/events.js';
-import Media from './pages/media.js';
-import Members from './pages/members.js';
-import Homepage from './pages/homepage.js';
+import Nav from './nav.tsx';
+import Director from './pages/director.tsx';
+import Events from './pages/events.tsx';
+import Media from './pages/media.tsx';
+import Members from './pages/members.tsx';
+import Homepage from './pages/homepage.tsx';
 
 import {
   BrowserRouter as Router, 
