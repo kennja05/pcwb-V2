@@ -7,7 +7,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 interface NavProps {
     active: boolean;
-    orange: string;
+    currLocation: string;
 }
 
 const NavBar = styled.nav<NavProps>`
