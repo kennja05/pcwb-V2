@@ -43,7 +43,7 @@ function App() {
     <Router>
       <div className="App">
         <ThemeProvider theme={theme}>
-        <Nav {...colors}></Nav>
+        <Nav></Nav>
         <Switch>
           <Route exact path='/director'>
             <Director {...colors}/>

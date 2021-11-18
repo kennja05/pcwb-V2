@@ -7,7 +7,6 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 interface NavProps {
     active: boolean;
-    currLocation: string;
 }
 
 const NavBar = styled.nav<NavProps>`
@@ -26,13 +25,13 @@ const NavBar = styled.nav<NavProps>`
     display: flex;
     align-items: stretch;
     flex-direction: column; 
-    background: ${props => props.orange};
+    background: ${props => props.theme.colors.orange};
     z-index: 3;
     font-size: 3rem;
     text-align: right;
     & span:nth-of-type(even){
-        border-bottom: .2rem solid ${props => props.darkOrange};
-        border-top: .2rem solid ${props => props.darkOrange};
+        border-bottom: .2rem solid ${props => props.theme.colors.darkOrange};
+        border-top: .2rem solid ${props => props.theme.colors.darkOrange};
     }
     & a {
         padding-right: 1rem;
@@ -40,10 +39,14 @@ const NavBar = styled.nav<NavProps>`
 
 `
 
-const StyledLink = styled.span`
-    color: ${props => props.currLocation ? props.darkBlue2 : props.offWhite};
+interface LinkProps {
+    currLocation: string;
+}
+
+const StyledLink = styled.span<LinkProps>`
+    color: ${props => props.currLocation ? props.theme.colors.darkBlue2 : props.theme.colors.offWhite};
     &:hover {
-        color: ${props => props.darkBlue};
+        color: ${props => props.theme.colors.darkBlue};
     };
 `
 
@@ -53,7 +56,7 @@ const SpanIcon = styled.span`
     left: 1rem;
     z-index: 2;
     font-size: 3rem;
-    color: ${props => props.offWhite};
+    color: ${props => props.theme.colors.offWhite};
     & a:hover{
         cursor: pointer;
     }
@@ -69,9 +72,10 @@ const StyledButton = styled.button`
     display: inline;
     text-align: left;
     text-indent: 1rem;
+    color: ${props => props.theme.colors.offWhite};
 `
 
-export default function Nav(props) {
+export default function Nav() {
 
     //Open and close nav menu 
     const [menu, setMenu] = useState(false);
@@ -85,11 +89,11 @@ export default function Nav(props) {
     return(
         <div>
             <SpanIcon onClick={() => setMenu(!menu)}>
-                <FontAwesomeIcon icon={faBars} color={props.offWhite}/>    
+                <FontAwesomeIcon icon={faBars} />    
             </SpanIcon>     
-            <NavBar active={menu} {...props}>
+            <NavBar active={menu}>
                 <StyledButton onClick={() => setMenu(!menu)}>
-                    <FontAwesomeIcon icon={faTimes} color={props.offWhite}/>
+                    <FontAwesomeIcon icon={faTimes} />
                 </StyledButton>
                 
                     <NavLink onClick={() => setMenu(!menu)} to='/'>
