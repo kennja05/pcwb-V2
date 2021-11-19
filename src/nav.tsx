@@ -40,7 +40,7 @@ const NavBar = styled.nav<NavProps>`
 `
 
 interface LinkProps {
-    currLocation: string;
+    currLocation: boolean;
 }
 
 const StyledLink = styled.span<LinkProps>`
@@ -78,7 +78,7 @@ const StyledButton = styled.button`
 export default function Nav() {
 
     //Open and close nav menu 
-    const [menu, setMenu] = useState(false);
+    const [menu, setMenu] = useState<boolean>(false);
     
     //determine url and update when new link is clicked
     const [path, setPath] = useState('')
@@ -97,15 +97,15 @@ export default function Nav() {
                 </StyledButton>
                 
                     <NavLink onClick={() => setMenu(!menu)} to='/'>
-                    <StyledLink currLocation={path === '/' ? true : false} {...props}>
+                    <StyledLink currLocation={path === '/' ? true : false} >
                         Home
                         </StyledLink>
 
                         </NavLink>
-                <StyledLink currLocation={path === '/director' ? true : false} {...props}>
+                <StyledLink currLocation={path === '/director' ? true : false}>
                     <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
                 </StyledLink>
-                <StyledLink currLocation={path === '/media' ? true : false} {...props}>
+                <StyledLink currLocation={path === '/media' ? true : false}>
                     <NavLink onClick={() => setMenu(!menu)} to='/media'>Media</NavLink>
                 </StyledLink>
             </NavBar>

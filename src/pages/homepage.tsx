@@ -9,7 +9,7 @@ import Seal from '../assets/images/seal.png';
 
 const HomepageWrapper = styled.div`
     font-size: 2.5rem;
-    background: linear-gradient(to top, ${props => props.theme.darkBlue2}, ${props => props.theme.darkBlue});
+    background: linear-gradient(to top, ${props => props.theme.colors.darkBlue2}, ${props => props.theme.colors.darkBlue});
 `
 
 const HomepageHeader = styled.header`
@@ -37,7 +37,7 @@ const lineDrawToLeft = keyframes`
 const IntroHeader = styled.div`
     grid-area: header;
     z-index: 1;
-    background-color: ${props => props.theme.darkBlue};
+    background-color: ${props => props.theme.colors.darkBlue};
     animation: ${fadeOut} 3s 6s forwards;
     display: flex;
     flex-direction: column;
@@ -47,13 +47,13 @@ const IntroHeader = styled.div`
 
 const IntroTitleBox = styled.div`
     position: relative;
-    color: ${props => props.theme.white};
+    color: ${props => props.theme.colors.white};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
-        border-bottom: solid .5rem ${props => props.theme.orange};
+        border-bottom: solid .5rem ${props => props.theme.colors.orange};
         position: absolute;
     };
     &:before {
@@ -91,13 +91,13 @@ const MainHeader = styled.div`
 
 const MainHeaderTitleBox = styled.div`
     position: relative;
-    color: ${props => props.theme.white};
+    color: ${props => props.theme.colors.white};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
         content: '';
         width: 100%;
-        border-bottom: solid .5rem ${props => props.theme.orange};
+        border-bottom: solid .5rem ${props => props.theme.colors.orange};
         position: absolute;
     };
     &:before {
@@ -115,7 +115,7 @@ const PCWBSeal = styled.img`
     height: auto;
 `
 
-export default function Homepage(props) {
+export default function Homepage() {
     
     return(
         <HomepageWrapper>

@@ -25,9 +25,9 @@ const DirectorHeader = styled.header`
 `
 
 const StyledH1 = styled.h1`
-    color: ${props => props.theme.offWhite};
-    border-top: .5rem solid ${props => props.theme.orange};
-    border-bottom: .5rem solid ${props => props.theme.orange};
+    color: ${props => props.theme.colors.offWhite};
+    border-top: .5rem solid ${props => props.theme.colors.orange};
+    border-bottom: .5rem solid ${props => props.theme.colors.orange};
     font-size: 4rem;
 `
 
@@ -47,7 +47,7 @@ const PhotoContainer = styled.div`
     };
 `
 
-export default function Director(props){
+export default function Director(){
     return(
         <div>
             <DirectorHeader>
