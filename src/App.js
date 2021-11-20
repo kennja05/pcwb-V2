@@ -16,7 +16,8 @@ import {
 } from "react-router-dom";
 
 const theme = {
-    darkBlue: '#262c40',
+    colors: {
+      darkBlue: '#262c40',
     darkBlue2: '#192333',
     white: '#fbfbfb',
     offWhite: '#fbedda',
@@ -24,20 +25,11 @@ const theme = {
     darkOrange: '#d55b37',
     black: '#040404',
     gray: '#777'
+    }
+
 }
 
 function App() {
-
-  const colors = {
-    darkBlue: '#262c40',
-    darkBlue2: '#192333',
-    white: '#fbfbfb',
-    offWhite: '#fbedda',
-    orange: '#f37955',
-    darkOrange: '#d55b37',
-    black: '#040404',
-    gray: '#777'
-  }
 
   return (
     <Router>
@@ -46,7 +38,7 @@ function App() {
         <Nav></Nav>
         <Switch>
           <Route exact path='/director'>
-            <Director {...colors}/>
+            <Director />
           </Route>
           <Route exact path='/events'>
             <Events />
@@ -58,7 +50,7 @@ function App() {
             <Members />
           </Route>
           <Route exact path='/'>
-            <Homepage {...colors}/>
+            <Homepage />
           </Route>
         </Switch>
         </ThemeProvider>
