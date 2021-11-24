@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-//@ts-lint ignore
-import {ArticleWrapper} from '../partials/articlewrapper.tsx';
+import {ArticleWrapper} from '../partials/articlewrapper';
 import {StyledArticle} from '../partials/article';
 
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg';

@@ -2,8 +2,8 @@ import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
 import {StyledArticle} from '../partials/article';
-import {ArticleWrapper} from '../partials/articlewrapper.tsx';
-
+//@ts-ignore
+import {ArticleWrapper} from '../partials/articlewrapper';
 import TrumpetBackground from '../assets/images/trumpet.jpg';
 import Seal from '../assets/images/seal.png';
 
