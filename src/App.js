@@ -1,6 +1,7 @@
 import './App.css';
 
 import {ThemeProvider} from 'styled-components';
+import {siteTheme} from './partials/theme'
 
 import Nav from './nav.tsx';
 import Director from './pages/director.tsx';
@@ -15,26 +16,13 @@ import {
   Route
 } from "react-router-dom";
 
-const theme = {
-    colors: {
-      darkBlue: '#262c40',
-    darkBlue2: '#192333',
-    white: '#fbfbfb',
-    offWhite: '#fbedda',
-    orange: '#f37955',
-    darkOrange: '#d55b37',
-    black: '#040404',
-    gray: '#777'
-    }
-
-}
-
+ 
 function App() {
 
   return (
     <Router>
       <div className="App">
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={siteTheme}>
         <Nav></Nav>
         <Switch>
           <Route exact path='/director'>
