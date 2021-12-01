@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledArticle = styled.article`
     max-width: calc(100% - 10rem);
-    padding: 5rem 0rem 5rem 0rem;
     font-size: 2rem;
     & section {
         width: 70%;

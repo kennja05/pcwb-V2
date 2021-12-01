@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, {keyframes} from 'styled-components';
 
 import {StyledArticle} from '../partials/article';
@@ -46,7 +45,7 @@ const IntroHeader = styled.div`
 
 const IntroTitleBox = styled.div`
     position: relative;
-    color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.offWhite};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
@@ -90,7 +89,7 @@ const MainHeader = styled.div`
 
 const MainHeaderTitleBox = styled.div`
     position: relative;
-    color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.offWhite};
     line-height: 1.5;
     padding: 0 1.5rem 0 1.5rem;
     &:before, &:after {
@@ -133,8 +132,7 @@ export default function Homepage() {
                 </MainHeader> 
             </HomepageHeader>
             <ArticleWrapper>
-
-            <StyledArticle>
+                <StyledArticle>
                 <h2>About Us</h2>
                 <section>
                 <p>
@@ -143,12 +141,10 @@ export default function Homepage() {
                 <p>
                     The PCWB, founded in 1994, is one of the few select ensembles to have been awarded the Silver Sudler Scroll, awarded by the John Philip Sousa Foundation "recognizing community and adult concert bands of outstanding musical excellence." Other honors include invitations to perform for the conference of the Pennsylvania Music Educators Association and the national convention of the Association of Concert Bands. William Kenny, the band's founder and conductor, is professor of music at Bucknell, where he has taught for the past 30 years.
                 </p>
-                <PCWBSeal src={Seal} alt='PCWB Seal' />
                 </section>
+                <PCWBSeal src={Seal} alt='PCWB Seal' />
             </StyledArticle>
             </ArticleWrapper>
-
         </HomepageWrapper>
-        
     )
 }
