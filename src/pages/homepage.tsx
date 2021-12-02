@@ -133,8 +133,8 @@ export default function Homepage() {
             </HomepageHeader>
             <ArticleWrapper>
                 <StyledArticle>
-                <h2>About Us</h2>
                 <section>
+                <h2>About Us</h2>
                 <p>
                     The Penn Central Wind Band is an all-volunteer organization sponsored by Bucknell University as a service to the region. Many members of the band live in central Pennsylvania, but some travel from far afield to rehearse and perform with the ensemble. Many of the band's members hold music degrees, and are music teachers and professional performers, although all are great players!
                 </p>
@@ -142,7 +142,10 @@ export default function Homepage() {
                     The PCWB, founded in 1994, is one of the few select ensembles to have been awarded the Silver Sudler Scroll, awarded by the John Philip Sousa Foundation "recognizing community and adult concert bands of outstanding musical excellence." Other honors include invitations to perform for the conference of the Pennsylvania Music Educators Association and the national convention of the Association of Concert Bands. William Kenny, the band's founder and conductor, is professor of music at Bucknell, where he has taught for the past 30 years.
                 </p>
                 </section>
-                <PCWBSeal src={Seal} alt='PCWB Seal' />
+                <section>
+                    <p>fucccccccck</p>
+                    <PCWBSeal src={Seal} alt='PCWB Seal' />
+                </section>
             </StyledArticle>
             </ArticleWrapper>
         </HomepageWrapper>
