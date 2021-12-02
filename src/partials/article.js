@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 export const StyledArticle = styled.article`
     max-width: calc(100% - 10rem);
-    & section:first-of-type {
-        width: 70%;
-        line-height: 2.2rem;
+    border: 2px solid orange;
+    line-height: 2.5rem;
+    & section:nth-of-type(odd) {
+        width: 65%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         background: ${props => props.theme.colors.offWhite};
-
+        color: ${props => props.theme.colors.darkBlue2};
     };
-    & section {
-        border: 1px solid black;
+    & section:nth-of-type(even) {
+        width: 35%;
     };
     display: flex;
     justify-content: center;
-    color: ${props => props.theme.colors.darkBlue2};
 `
