@@ -42,3 +42,7 @@ button {
     text-align: left;
     text-indent: 1rem;
 }
+
+p {
+    margin: 1rem 0 1rem 0;
+}
