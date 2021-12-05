@@ -9,7 +9,7 @@ export const StyledArticle = styled.article`
         padding: 2rem;
         display: inline-block;
         &:hover{
-            color: ${props => props.theme.colors.offWhite};
+            color: ${props => props.theme.colors.darkOrange};
         }
     }
     & section div {
@@ -20,10 +20,20 @@ export const StyledArticle = styled.article`
     & section:nth-of-type(odd) {
         width: 65%;
         color: ${props => props.theme.colors.darkBlue2};
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        };
     };
     & section:nth-of-type(even) {
         width: 35%;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        };
     };
     display: flex;
     justify-content: center;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
