@@ -6,5 +6,6 @@ export const ArticleWrapper = styled.div`
     background: ${props => props.theme.colors.darkBlue2};
     font-size: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: stretch;
 `
