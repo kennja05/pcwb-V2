@@ -76,16 +76,19 @@ const IntroH2 = styled.h2`
 const MainHeader = styled.div`
     grid-area: header;
     background-image: linear-gradient(to right bottom, rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.5)),url(${TrumpetBackground});
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    @media only screen and (min-width: 1025px){
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     background-size: cover;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    `
+`
 
 const MainHeaderTitleBox = styled.div`
     position: relative;
