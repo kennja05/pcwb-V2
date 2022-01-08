@@ -6,19 +6,19 @@ export const StyledArticle = styled.article`
     display: flex;
     justify-content: center;
     & section h2{
-        color: ${props => props.theme.colors.darkOrange};
-        padding: 2rem 0 2rem 0;
+        color: ${props => props.theme.colors.orange};
+        padding: 2rem 0 0rem 0;
         display: inline-block;
     }
     & section {
-        padding: 1rem;
+        margin: 0 1rem 0 0;
     }
     & section:nth-of-type(odd) {
         width: 65%;
         background-image: linear-gradient(to right, ${props => props.theme.colors.darkBlue2}, ${props => props.theme.colors.darkBlue});
         color: ${props => props.theme.colors.offWhite};
         @media only screen and (max-width: 768px) {
-            width: 100%;
+            width: 98%;
         };
     };
     & section:nth-of-type(even) {
