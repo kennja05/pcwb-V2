@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledArticle = styled.article`
     max-width: calc(100% - 5rem);
-    margin: 0 0 2rem 0;
     line-height: 2.8rem;
     display: flex;
     justify-content: center;

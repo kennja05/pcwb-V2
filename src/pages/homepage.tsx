@@ -134,7 +134,7 @@ export default function Homepage() {
             <ArticleWrapper>
                 <StyledArticle>
                 <section>
-                    <h2><u>ABOUT US</u></h2>
+                    <h2>ABOUT US</h2>
                     <div>
                     <p>
                         The Penn Central Wind Band is an all-volunteer organization sponsored by Bucknell University as a service to the region. Many members of the band live in central Pennsylvania, but some travel from far afield to rehearse and perform with the ensemble. Many of the band's members hold music degrees, and are music teachers and professional performers, although all are great players!
