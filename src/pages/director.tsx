@@ -5,7 +5,6 @@ import {StyledArticle} from '../partials/article';
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg';
 import BillKenny from '../assets/images/BillKenny.jpg';
 import Bk2 from '../assets/images/BillKennyConducting.jpg';
-//import Bk2Cropped from '../assets/images/BillKennyConductingCropped.jpg';
 import BillKennySmiling from '../assets/images/BillKennySmiling.jpg';
 
 const DirectorHeader = styled.header`
@@ -61,6 +60,9 @@ export default function Director(){
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
                     </p>               
+                </section>
+                <section>
+                    <img src={BillKenny} alt = ''/>
                 </section>
                 <PhotoContainer>
                     <img src={BillKennySmiling} alt=''/>

@@ -57,7 +57,7 @@ const SpanIcon = styled.span`
     z-index: 2;
     font-size: 3rem;
     color: ${props => props.theme.colors.offWhite};
-    & a:hover{
+    &:hover{
         cursor: pointer;
     }
 `
