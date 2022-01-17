@@ -64,11 +64,10 @@ export default function Director(){
                 <section>
                     <img src={BillKenny} alt = ''/>
                 </section>
-                <PhotoContainer>
-                    <img src={BillKennySmiling} alt=''/>
+                    {/* <img src={BillKennySmiling} alt=''/>
                     <img src={BillKenny} alt=''/>
-                    <img src={Bk2} alt='' />
-                </PhotoContainer>   
+                    <img src={Bk2} alt='' /> */}
+   
                 <section>
                     <p>
                         In addition to conducting regional high school county and district band festivals, ensembles under Kenny’s direction have been selected to perform for the Pennsylvania Music Educators Association Conference, the Eastern Conference of the College Band Directors National Association, and for the national convention of the Association of Concert Bands. Articles he has written have appeared in prominent music publications including the Music Educators Journal and The Instrumentalist.

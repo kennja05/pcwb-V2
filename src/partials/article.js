@@ -13,6 +13,10 @@ export const StyledArticle = styled.article`
     & section {
         margin: 0 1rem 0 0;
         background-image: linear-gradient(to right, ${props => props.theme.colors.darkBlue2}, ${props => props.theme.colors.darkBlue});
+        &image {
+            height: 100%;
+            width: auto;
+        }
     }
     & section:nth-of-type(odd) {
         width: 65%;
@@ -20,6 +24,7 @@ export const StyledArticle = styled.article`
         @media only screen and (max-width: 768px) {
             width: 98%;
         };
+        border: 1px solid orange;
     };
     & section:nth-of-type(even) {
         width: 35%;
