@@ -4,6 +4,7 @@ export const StyledArticle = styled.article`
     max-width: calc(100% - 5rem);
     line-height: 2.8rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     & section h2{
         color: ${props => props.theme.colors.orange};
@@ -13,18 +14,18 @@ export const StyledArticle = styled.article`
     & section {
         margin: 0 1rem 0 0;
         background-image: linear-gradient(to right, ${props => props.theme.colors.darkBlue2}, ${props => props.theme.colors.darkBlue});
-        &image {
-            height: 100%;
-            width: auto;
+        & img {
+            height: auto;
+            max-width: 100%;
+            border-radius: 1rem;
         }
     }
     & section:nth-of-type(odd) {
-        width: 65%;
+        width: 60%;
         color: ${props => props.theme.colors.offWhite};
         @media only screen and (max-width: 768px) {
             width: 98%;
         };
-        border: 1px solid orange;
     };
     & section:nth-of-type(even) {
         width: 35%;
