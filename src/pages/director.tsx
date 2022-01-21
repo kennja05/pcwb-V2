@@ -29,22 +29,6 @@ const StyledH1 = styled.h1`
     font-size: 4rem;
 `
 
-const PhotoContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    @media only screen and (max-width: 900px) {
-        flex-direction: column;    
-    }
-    margin: 1rem 0 1rem 0;
-    width: 100%;
-    & img {
-        width: 30%;
-        height: auto;
-        border-radius: 1rem;
-    };
-`
-
 export default function Director(){
     return(
         <div>
@@ -59,19 +43,20 @@ export default function Director(){
                     </p>
                     <p>
                         While at Bucknell, he has served as Associate Dean of Faculty in the College of Arts and Sciences, ten years as Chair of the Department of Music, and for the past fours years, as chair of the 400-member Bucknell University faculty.
-                    </p>               
+                    </p> 
+                    <p>
+                        In addition to conducting regional high school county and district band festivals, ensembles under Kenny’s direction have been selected to perform for the Pennsylvania Music Educators Association Conference, the Eastern Conference of the College Band Directors National Association, and for the national convention of the Association of Concert Bands. Articles he has written have appeared in prominent music publications including the Music Educators Journal and The Instrumentalist.
+                    </p>             
                 </section>
                 <section>
-                    <img src={BillKenny} alt = ''/>
+                    <img src={BillKennySmiling} alt = ''/>
                 </section>
                     {/* <img src={BillKennySmiling} alt=''/>
                     <img src={BillKenny} alt=''/>
                     <img src={Bk2} alt='' /> */}
    
                 <section>
-                    <p>
-                        In addition to conducting regional high school county and district band festivals, ensembles under Kenny’s direction have been selected to perform for the Pennsylvania Music Educators Association Conference, the Eastern Conference of the College Band Directors National Association, and for the national convention of the Association of Concert Bands. Articles he has written have appeared in prominent music publications including the Music Educators Journal and The Instrumentalist.
-                    </p>
+                    
                     <p>
                         In addition to his university work, Kenny is founder and conductor of the Penn Central Wind Band, an ensemble comprising professional musicians and music teachers from central Pennsylvania and beyond. The PCWB is a recipient of the Sudler Silver Scroll—an award administered by the John Philip Sousa Foundation “recognizing community and adult concert bands of outstanding musical excellence.” It was just the 30th ensemble to receive this international award since its inception in 1987. Since the band's founding over twenty-five years ago, its Sousa-style concerts and its performances of contemporary band music have been enjoyed by many throughout the region.
                     </p>

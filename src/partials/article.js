@@ -21,14 +21,18 @@ export const StyledArticle = styled.article`
         }
     }
     & section:nth-of-type(odd) {
-        width: 60%;
+        width: 64%;
         color: ${props => props.theme.colors.offWhite};
         @media only screen and (max-width: 768px) {
             width: 98%;
         };
     };
     & section:nth-of-type(even) {
-        width: 35%;
+        width: 34%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         @media only screen and (max-width: 768px) {
             width: 100%;
         };
