@@ -3,8 +3,7 @@ import {ArticleWrapper} from '../partials/articlewrapper';
 import {StyledArticle} from '../partials/article';
 
 import BillKennyTimeline from '../assets/images/BillKennyTimeline.jpg';
-import BillKenny from '../assets/images/BillKenny.jpg';
-import Bk2 from '../assets/images/BillKennyConducting.jpg';
+import BillKennyConducting from '../assets/images/BillKennyConducting.jpg';
 import BillKennySmiling from '../assets/images/BillKennySmiling.jpg';
 
 const DirectorHeader = styled.header`
@@ -54,7 +53,7 @@ export default function Director(){
                     {/* <img ={BillKennySmiling} alt=''/>
                     <img src={BillKenny} alt=''/>*/}
                 <section>
-                    <img src={Bk2} alt='' />
+                    <img src={BillKennyConducting} alt='' />
                 </section>
                 <section>
                      <p>
