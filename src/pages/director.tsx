@@ -51,20 +51,21 @@ export default function Director(){
                 <section>
                     <img src={BillKennySmiling} alt = ''/>
                 </section>
-                    {/* <img src={BillKennySmiling} alt=''/>
+                    {/* <img ={BillKennySmiling} alt=''/>
                     <img src={BillKenny} alt=''/>
-                    <img src={Bk2} alt='' /> */}
-   
+                    <img src={srcBk2} alt='' /> */}
                 <section>
-                    
-                    <p>
+                    <img src={Bk2} alt='' />
+                </section>
+                <section>
+                     <p>
                         In addition to his university work, Kenny is founder and conductor of the Penn Central Wind Band, an ensemble comprising professional musicians and music teachers from central Pennsylvania and beyond. The PCWB is a recipient of the Sudler Silver Scroll—an award administered by the John Philip Sousa Foundation “recognizing community and adult concert bands of outstanding musical excellence.” It was just the 30th ensemble to receive this international award since its inception in 1987. Since the band's founding over twenty-five years ago, its Sousa-style concerts and its performances of contemporary band music have been enjoyed by many throughout the region.
                     </p>
                     <p>
                         As a performer, Kenny serves as principal horn with the Williamsport Symphony Orchestra and the Orchestra of the Susquehanna Valley Chorale, and as hornist with the Commonwealth Brass Quintet. He also performs regularly with touring artists, most recently this past winter with Mannheim Steamroller as part of the group's northeast regional Christmas tour.
                     </p>
                     <p>
-                        A graduate of Oregon State University, Kenny received both his master's degree and doctorate in music education from the University of Illinois. He lives in Lewisburg with his wife, Amy—his Bison Band co conspirator and one of the fine flutists in the PCWB.
+                        A graduate of Oregon State University, Kenny received both his master's degree and doctorate in music education from the University of Illinois. He lives in Lewisburg with his wife, Amy—his Bison Band co-conspirator and one of the fine flutists in the PCWB.
                     </p>
                 </section>
             </StyledArticle>

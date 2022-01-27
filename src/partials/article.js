@@ -12,7 +12,8 @@ export const StyledArticle = styled.article`
         display: inline-block;
     }
     & section {
-        margin: 0 1rem 0 0;
+        margin: 0 0rem 0 0;
+        padding: 1rem .5rem;
         background-image: linear-gradient(to right, ${props => props.theme.colors.darkBlue2}, ${props => props.theme.colors.darkBlue});
         & img {
             height: auto;
@@ -20,15 +21,15 @@ export const StyledArticle = styled.article`
             border-radius: 1rem;
         }
     }
-    & section:nth-of-type(odd) {
-        width: 64%;
+    & section:nth-of-type(4n-3), section:nth-of-type(4n-1) {
+        width: calc(65% - 1rem);
         color: ${props => props.theme.colors.offWhite};
         @media only screen and (max-width: 768px) {
             width: 98%;
         };
     };
-    & section:nth-of-type(even) {
-        width: 34%;
+    & section:nth-of-type(4n-2), section:nth-of-type(4n) {
+        width: calc(35% - 1rem);
         display: flex;
         flex-direction: column;
         align-items: center;
