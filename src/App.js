@@ -3,8 +3,9 @@ import './App.css';
 import {ThemeProvider} from 'styled-components';
 import {siteTheme} from './partials/theme'
 
-import Nav from './nav.tsx';
+import Nav from './partials/nav.tsx';
 import Director from './pages/director.tsx';
+import ContactForm from './pages/contactForm.tsx';
 import Events from './pages/events.tsx';
 import Media from './pages/media.tsx';
 import Members from './pages/members.tsx';
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route exact path='/members'>
             <Members />
+          </Route>
+          <Route exact path='/contact'>
+            <ContactForm />
           </Route>
           <Route exact path='/'>
             <Homepage />
