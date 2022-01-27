@@ -52,8 +52,7 @@ export default function Director(){
                     <img src={BillKennySmiling} alt = ''/>
                 </section>
                     {/* <img ={BillKennySmiling} alt=''/>
-                    <img src={BillKenny} alt=''/>
-                    <img src={srcBk2} alt='' /> */}
+                    <img src={BillKenny} alt=''/>*/}
                 <section>
                     <img src={Bk2} alt='' />
                 </section>

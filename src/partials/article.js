@@ -21,14 +21,14 @@ export const StyledArticle = styled.article`
             border-radius: 1rem;
         }
     }
-    & section:nth-of-type(4n-3), section:nth-of-type(4n-1) {
+    & section:nth-of-type(4n-3), section:nth-of-type(4n) {
         width: calc(65% - 1rem);
         color: ${props => props.theme.colors.offWhite};
         @media only screen and (max-width: 768px) {
             width: 98%;
         };
     };
-    & section:nth-of-type(4n-2), section:nth-of-type(4n) {
+    & section:nth-of-type(4n-2), section:nth-of-type(4n-1) {
         width: calc(35% - 1rem);
         display: flex;
         flex-direction: column;
