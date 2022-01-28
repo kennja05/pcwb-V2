@@ -21,10 +21,21 @@ export default function contactForm(){
     return (
         <FormPageWrapper>
             <FormWrapper>
-                <h1>Questions, Commments, or Inquiries</h1>
+                <h1>
+                    Contact us
+                </h1>
+                <h3>
+                    Please fill out the form below with any inquiries
+                    or comments to share with the band.
+                </h3>
+                <h4>
+                    If you have any photos of the band to share
+                    please upload here!
+                </h4>
                <form>
-                    <textarea></textarea>
+                    <textarea placeholder='Questions or comments...'></textarea>
                     <input type='email' />
+                    <input type='file' />
                     <input type='submit' />
                 </form> 
             </FormWrapper>

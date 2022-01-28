@@ -4,6 +4,7 @@ import {ThemeProvider} from 'styled-components';
 import {siteTheme} from './partials/theme'
 
 import Nav from './partials/nav.tsx';
+import Footer from './partials/footer.tsx';
 import Director from './pages/director.tsx';
 import ContactForm from './pages/contactForm.tsx';
 import Events from './pages/events.tsx';
@@ -45,6 +46,7 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
+        <Footer />
         </ThemeProvider>
       </div>
     </Router>
