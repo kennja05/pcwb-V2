@@ -8,6 +8,9 @@ const Footer = styled.footer`
 
 export default function footer() {
     return (
-        <Footer>footerrr</Footer>
+        <Footer>
+            <span>©2022</span>
+            <span><a href='/contact'>Contact Us</a></span>
+        </Footer>
     )
 }

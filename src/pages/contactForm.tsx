@@ -33,9 +33,14 @@ export default function contactForm(){
                     please upload here!
                 </h4>
                <form>
-                    <textarea placeholder='Questions or comments...'></textarea>
-                    <input type='email' />
-                    <input type='file' />
+                   <fieldset>
+                       <legend>Questions / Comments</legend>
+                       <textarea placeholder='Questions or comments...'></textarea>
+                   </fieldset>
+                   <fieldset>
+                       <legend>Your Email Address</legend>
+                        <input type='email' />
+                    </fieldset>
                     <input type='submit' />
                 </form> 
             </FormWrapper>
