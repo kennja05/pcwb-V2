@@ -2,6 +2,7 @@ import './App.css';
 
 import {ThemeProvider} from 'styled-components';
 import {siteTheme} from './partials/theme'
+import ScrollToTop from './partials/scrollTop'
 
 import Nav from './partials/nav.tsx';
 import Footer from './partials/footer.tsx';
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <ThemeProvider theme={siteTheme}>
         <Nav></Nav>
@@ -46,6 +48,7 @@ function App() {
             <Homepage />
           </Route>
         </Switch>
+        
         <Footer />
         </ThemeProvider>
       </div>
