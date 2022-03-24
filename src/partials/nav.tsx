@@ -95,13 +95,9 @@ export default function Nav() {
                 <StyledButton onClick={() => setMenu(!menu)}>
                     <FontAwesomeIcon icon={faTimes} />
                 </StyledButton>
-                
-                    <NavLink onClick={() => setMenu(!menu)} to='/'>
-                    <StyledLink currLocation={path === '/' ? true : false} >
-                        Home
-                        </StyledLink>
-
-                        </NavLink>
+                <StyledLink currLocation={path === '/' ? true : false} >
+                    <NavLink onClick={() => setMenu(!menu)} to='/'>Home</NavLink>
+                </StyledLink>
                 <StyledLink currLocation={path === '/director' ? true : false}>
                     <NavLink onClick={() => setMenu(!menu)} to='/director'>Director</NavLink>
                 </StyledLink>

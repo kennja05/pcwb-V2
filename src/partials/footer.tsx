@@ -16,7 +16,7 @@ const Footer = styled.footer`
 
 export default function footer() {
     return (
-        <Footer onClick={(e) => console.log(e.target)}>
+        <Footer>
             <span>©2022</span>
             <span><a href='/contact'>Contact</a></span>
         </Footer>
