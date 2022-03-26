@@ -46,7 +46,7 @@ interface LinkProps {
 const StyledLink = styled.span<LinkProps>`
     color: ${props => props.currLocation ? props.theme.colors.darkBlue2 : props.theme.colors.offWhite};
     &:hover {
-        color: ${props => props.theme.colors.darkBlue};
+        color: ${props => props.theme.colors.darkBlue2};
     };
 `
 
